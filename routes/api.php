@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('short/url', 'UrlController@storeUrl');
+Route::get('get/hot100', 'UrlController@hot100')->name('hot100');
