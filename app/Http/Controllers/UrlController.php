@@ -19,11 +19,15 @@ class UrlController extends Controller
      */
     public function getUrl($key)
     {
-        $link = Url::where('key', $key)->firstOrFail();
-        $link->accessed = $link->accessed + 1;
-        $link->save();
-
-        return redirect($link->url);
+        try{
+            $link = Url::where('key', $key)->firstOrFail();
+            $link->accessed = $link->accessed + 1;
+            $link->save();
+    
+            return redirect($link->url);
+        }catch(\Exception $e){
+            \abort(404);
+        }
     }
 
     public function storeUrl(Request $request)
