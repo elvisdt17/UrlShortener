@@ -25,7 +25,7 @@ Then:
 Once completed run:
 ```
     docker-compose up -d
-```(this proccess could take a few minutes)
+```
 
 After every docker container is up
 run:
