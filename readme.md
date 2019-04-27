@@ -2,7 +2,7 @@
 
 Simple url shortener API. The algorithm used here uses a dictionary of characters which will be used to generate the shortened url.
 
-It works by providing a integer and then substracting of the dictionary a letter in the position of a number which is the result of finding the multiple value of the integer provided and the length of the dictionary, while the integer is greater than zero.
+It works by providing a integer and then substracting of the dictionary a letter in the position of a number which is the result of finding the multiple value of the integer provided and the length of the dictionary while such integer is greater than zero.
 
 ## Requirements
 
