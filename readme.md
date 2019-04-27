@@ -19,7 +19,7 @@ Clone the repo in your local machine, then cd to the root directory and run:
 
 Then:
 ```
-    cp .env.example .env
+    cp .env.example .env && php artisan key:generate
 ```
 
 Once completed run:
@@ -30,7 +30,16 @@ Once completed run:
 After every docker container is up
 run:
 ```
+    docker exec -it urlshortener_app_1 bash
+```
+to get inside of the container and run the migrations.
+
+Once inside the container run:
+```
     php artisan migrate --seed
 ```
-to run the migrations and seed the database
 
+After all that the API should be accessible on: 
+``` 
+    http://localhost:8080
+```
